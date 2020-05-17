@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-119579696-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-119579696-2");
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="max-age=31536000" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      Trentino in bus - Bot telegram
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Mattia Paternoster" />
+    <meta
+      name="description"
+      content="Consulta orari e ritardi in tempo reale di tutti i trasporti della Provincia di Trento (Autobus, Treni, Tram, Bici, Funivie, Parcheggi). Tutto in un unico, intuitivo e veloce bot Telegram!"
+    />
+    <meta
+      name="keywords"
+      content="Trasporti Trentino, Trentino in Bus, Ritardi autobus Trento, Trento, Provincia di Trento, Ritardi Treni, Orari trentino trasporti, ritardi treni rovereto, Ritardi bus rovereto"
+    />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <!-- Bootstrap  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Modernizr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="fh5co-loader"></div>
+
+    <div id="page">
+        <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
+            style="background-image:url(images/cover_bg_3.webp);" data-stellar-background-ratio="0.5">
+            <div class="overlay2"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t js-fullheight">
+                            <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+                                <div class="profile-thumb" style="background: url(images/TrentinoInBusBotQuadrata.webp);"></div>
+                                <h1><span>Trentino in bus</span></h1>
+                                <h3><span>Consulta orari e ritardi in tempo reale di tutti i trasporti della Provincia di Trento (Autobus, Treni, Tram, Bici,
+                                Funivie, Parcheggi). Tutto in un unico, intuitivo e veloce bot Telegram!</span></h3>
+                                <p>
+                                    <ul class="fh5co-social-icons">
+                                        <li><a href="https://t.me/trentinoinbusbot"><i class="icon-telegram" title="Bot Telegram"></i></a></li>
+                                        <li><a href="https://www.facebook.com/trentinoinbus"><i class="icon-facebook2" title="Pagina Facebook"></i></a></li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="fh5co-resume" class="fh5co-bg-color">
+            <div class="container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                        <h2>Con questo bot puoi:</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-0">
+                        <ul class="timeline">
+                            <li class="timeline-heading text-center animate-box">
+                                <div>
+                                    <h3>Funzionalità</h3>
+                                </div>
+                            </li>
+                            <li class="animate-box timeline-unverted">
+                                <div class="timeline-badge" style="background-color:rgba(101, 179, 255);"><i class="icon-table2"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">Orari</h3>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Consultare gli orari di tutti i trasporti pubblici della Provincia di Trento.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge" style="background-color:rgba(101, 179, 255);"><i class="icon-time-slot"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">Ritardi</h3>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Conoscere il ritardo e l'ultima posizione conosciuta di qualsiasi mezzo (Autobus, tram, treni e funivie).</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="animate-box timeline-unverted">
+                                <div class="timeline-badge" style="background-color:rgba(101, 179, 255);"><i class="icon-map-marker"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">Posizione live</h3>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Visualizzare sulla mappa dove si trova un autobus in tempo reale con la possibilità di seguirlo durante il suo percorso</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge" style="background-color:rgba(101, 179, 255);"><i class="icon-shield"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">Parcheggi</h3>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Visualizzare il numero di posti liberi nei parcheggi dei comuni di Trento e Rovereto.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="animate-box timeline-unverted">
+                                <div class="timeline-badge" style="background-color:rgba(101, 179, 255);"><i class="icon-bike"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">Biciclette</h3>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Sapere la disponibilità di bici elettriche presenti nelle stazioni di ricarica della Provincia.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge" style="background-color:rgba(101, 179, 255);"><i class="icon-star"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">Preferiti</h3>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Salva le fermate e linee per una consultazione di orari e ritardi molto più veloce.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="animate-box timeline-unverted">
+                                <div class="timeline-badge" style="background-color:rgba(101, 179, 255);"><i class="icon-streetsign"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">Codici abbonamenti OpenMove</h3>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Eri di fretta e ti sei dimenticato di timbrare l'abbonamento OpenMove? Nel bot sono presenti tutti i codici
+                                            delle stazioni e di alcuni bus
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-started" style="background-color: rgba(101, 179, 255, 0.9);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                        <h2>Provalo!</h2>
+                        <p>Se siete interessati a questo bot non vi resta che provarlo e se vi piacerà consigliatelo anche ai vostri amici!</p>
+                        <p><a href="https://t.me/trentinoinbusbot" class="btn btn-default btn-lg" style="Color:rgba(101, 179, 255, 0.9)">Vai al bot</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+      <div id="fh5co-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p>
+                &copy; Pater999.tech. Tutti i diritti riservati.<br />
+                <a style="Color:rgba(101, 179, 255, 0.9)" href="/">Homepage</a> -
+                <a style="Color:rgba(101, 179, 255, 0.9)" href="/cookie-policy">Cookie policy</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gototop js-top">
+      <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+    </div>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery Easing -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Waypoints -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Stellar Parallax -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- Easy PieChart -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Main -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
