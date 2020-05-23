@@ -19,7 +19,7 @@
     <meta http-equiv="cache-control" content="max-age=31536000" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-      CoronaVirus Trentino - Canale Telegram con news e dati giornalieri
+      CoronaVirus Trentino - Canale Telegram con news e dati giornalieri sul COVID19
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Mattia Paternoster" />
@@ -63,10 +63,170 @@
     <!--[if lt IE 9]>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+    <style>
+      ::selection {
+        background-color:rgba(251, 2, 0);
+        /* WebKit/Blink Browsers */
+      }
+    
+      ::-moz-selection {
+        background-color:rgba(251, 2, 0);
+        /* Gecko Browsers */
+      }
+    </style>
   </head>
 
   <body>
     <div class="fh5co-loader"></div>
+
+    <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
+      style="background-image:url(images/cover_bg_Covid-Channel.webp);" data-stellar-background-ratio="0.5">
+      <div class="overlay3"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <div class="display-t js-fullheight">
+              <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+                <div class="profile-thumb" style="background: url(images/CoronaVirusChannelQuadrata.webp);"></div>
+                <h1><span>CoronaVirus Trentino</span></h1>
+                <h3><span>Canale telegram che permette agli iscritti di monitorare il numero di contagiati da COVID-19
+                nel mondo, in Italia e in Trentino. Inoltre invia giornalmente notizie riguardanti il coronavirus in Trentino.</span></h3>
+                <p>
+                <ul class="fh5co-social-icons">
+                  <li><a href="https://t.me/coronavirustrentino"><i class="icon-telegram" title="Bot Telegram"></i></a></li>
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div id="fh5co-resume" class="fh5co-bg-color">
+      <div class="container">
+        <div class="row animate-box">
+          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+            <h2>Questo canale invia giornalmente:</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-md-offset-0">
+            <ul class="timeline">
+              <li class="timeline-heading text-center animate-box">
+                <div>
+                  <h3>Numeri del contagio</h3>
+                </div>
+              </li>
+              <li class="animate-box timeline-unverted">
+                <div class="timeline-badge" style="background-color:rgba(238, 15, 0);"><i class="icon-globe2"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Contagi totali Mondo</h3>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Tutti i dati riferiti al contagio da coronavirus nel Mondo (infetti, deceduti, guariti, tamponi).</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted animate-box">
+                <div class="timeline-badge" style="background-color:rgba(238, 15, 0);"><i class="icon-map3"></i>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Contagi nei paesi del Mondo</h3>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Numero di positivi e deceduti in ogni paese del mondo.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="animate-box timeline-unverted">
+                <div class="timeline-badge" style="background-color:rgba(238, 15, 0);"><i class="icon-italic"></i>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Contagi Italia</h3>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Tutti i dati riferiti al contagio da coronavirus in Italia (infetti, deceduti, guariti, tamponi).</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted animate-box">
+                <div class="timeline-badge" style="background-color:rgba(238, 15, 0);"><i class="icon-shield"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Contagi nelle regioni Italiane</h3>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Infetti, deceduti, guariti, tamponi, ricoverati di ogni regione italiana.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="animate-box timeline-unverted">
+                <div class="timeline-badge" style="background-color:rgba(238, 15, 0);"><i class="icon-home3"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Contagi comuni Trentino</h3>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Numero di infetti, deceduti e guariti di ogni comune del Trentino.</p>
+                  </div>
+                </div>
+              </li>
+              <br>
+              <li class="timeline-heading text-center animate-box">
+                <div>
+                  <h3>NOTIZIE e Comunicati</h3>
+                </div>
+              </li>
+              <li class="timeline-inverted animate-box">
+                <div class="timeline-badge" style="background-color:rgba(238, 15, 0);"><i class="icon-newspaper2"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Comunicati stampa provincia</h3>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Tutti i comunicati stampa della provincia e le notizie riguardanti il COVID-19 in Trentino.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="animate-box timeline-unverted">
+                <div class="timeline-badge" style="background-color:rgba(238, 15, 0);"><i class="icon-video-camera"></i>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Avvisi conferenze stampa</h3>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Orario e link facebook della quotidiana conferenza stampa del governatore Maurizio Fugatti in cui aggiorna la popolazione sulla situazione contagio da Coronavirus.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="fh5co-started" style="background-color: rgba(238, 15, 0);">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row animate-box">
+          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+            <h2>Segui il canale!</h2>
+            <p>Se siete interessati a questo canale non vi resta che seguirlo e se vi piacerà condividetelo anche con i vostri
+              amici!</p>
+            <p><a href="https://t.me/coronavirustrentino" class="btn btn-default btn-lg" style="Color:rgba(238, 15, 0);">Vai
+                al canale</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="page">
       <div id="fh5co-footer">
@@ -75,8 +235,8 @@
             <div class="col-md-12">
               <p>
                 &copy; Pater999.tech. Tutti i diritti riservati.<br />
-                <a href="/">Homepage</a> -
-                <a href="/cookie-policy">Cookie policy</a>
+                <a style="Color:rgba(238, 15, 0);" href="/">Homepage</a> -
+                <a style="Color:rgba(238, 15, 0);" href="/cookie-policy">Cookie policy</a>
               </p>
             </div>
           </div>
