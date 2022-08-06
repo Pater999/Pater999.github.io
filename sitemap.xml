@@ -1,45 +1,15 @@
 <?xml version="1.0"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://pater999.tech/</loc>
-        <lastmod>2020-05-23</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://pater999.it/</loc>
+        <lastmod>2022-08-07</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://pater999.tech/cookie-policy</loc>
-        <lastmod>2020-05-23</lastmod>
+        <loc>https://pater999.it/unitn-projects</loc>
+        <lastmod>2022-08-07</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-    <url>
-        <loc>https://pater999.tech/coronavirustrentino</loc>
-        <lastmod>2020-05-23</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://pater999.tech/coronavirustrentinobot</loc>
-        <lastmod>2020-05-23</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://pater999.tech/trentinoinbus</loc>
-        <lastmod>2020-05-23</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://pater999.tech/unitn-appunti</loc>
-        <lastmod>2020-05-23</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://pater999.tech/unitn-progetti</loc>
-        <lastmod>2020-05-23</lastmod>
-        <changefreq>daily</changefreq>
         <priority>0.9</priority>
         </url>
 </urlset>
