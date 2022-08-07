@@ -5,6 +5,7 @@ var sass = require("gulp-sass")(require("sass"));
 var wait = require("gulp-wait");
 var rename = require("gulp-rename");
 var autoprefixer = require("gulp-autoprefixer");
+const webp = require("gulp-webp");
 // var imagemin = require('gulp-imagemin');
 const { series } = require("gulp");
 
@@ -39,6 +40,10 @@ gulp.task("styles", function () {
         .pipe(gulp.dest("styles"));
 });
 
+gulp.task("images", () =>
+    gulp.src("images/*").pipe(webp()).pipe(gulp.dest("images"))
+);
+
 // Optimize Images
 // gulp.task('images', () =>
 //     gulp.src('images/*')
@@ -51,4 +56,4 @@ gulp.task("watch", function () {
     gulp.watch("styles/styles.scss", gulp.series("styles"));
 });
 
-exports.default = series("styles", "scripts");
+exports.default = series("styles", "scripts", "images");
