@@ -1,586 +1,492 @@
-<!DOCTYPE HTML>
-<html lang="it">
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119579696-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119579696-2"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+      gtag('config', 'UA-119579696-2');
+    </script>
+    <meta content="text/html" charset="UTF-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal site of Mattia Paternoster also know as Pater999. An italian remote backend developer based in Trento." />
+    <meta name="keywords"
+		content="Mattia, Paternoster, Curriculum, Pater999, Portfolio, developer, full remote, full stack developer, backend developer" />
+    <title>Pater999's personal website & portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/png"/>
 
-		gtag('config', 'UA-119579696-2');
-	</script>
-	<meta charset="utf-8">
-	<meta http-equiv="cache-control" content="max-age=31536000" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="msvalidate.01" content="D31633E344B6FB488F98BB476F779E12" />
-	<title>Pater999.it - Homepage e Portfolio</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description"
-		content="Ciao sono Pater999! Sono un giovane Full Stack Developer. Lavoro da remoto. C#, Typescript, .NET, React.js, Vue.js, NodeJS sono le tecnologie che utilizzo giornalmente per i miei progetti." />
-	<meta name="keywords"
-		content="Mattia, Paternoster, Curriculum, Pater999, Pater, Portfolio, CoronaVirus Trentino, Trentino in bus, telegram bot, canale telegram, progetti, developer, full remote" />
-	<meta name="author" content="Mattia Paternoster" />
-	<link rel="icon" type="image/png" href="favicon.png" />
+    <!-- For Performance Improvements -->
+    <link
+      crossorigin
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css" 
+      integrity="sha512-X2hbziex+UPQ+KdI4BWI+39jEDhf2Smc6bfFI/FTIzWnt7mbwZCUU4RWalnMfxtHCpISlexzmd2kvPFJCliiPA==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" />
+    <link rel="preload" href="styles/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link href="styles/styles.css" rel="stylesheet" />
 
-	<meta property="og:title" content="Pater999 - Portfolio" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://pater999.it/" />
-	<meta property="og:description"
-		content="Ciao sono Pater999! Sono un giovane Full Stack Developer. Lavoro da remoto. C#, Typescript, .NET, React.js, Vue.js sono le tecnologie che utilizzo giornalmente per i miei progetti." />
-	<meta property="og:locale" content="it_IT" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" />
+      <link
+        crossorigin="anonymous"
+        integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.14.0/devicon-base.min.css"
+        integrity="sha512-QBmAN0VX1lfrhdUcl92KLv3Rxm2NJmAWsGrQd6vnfXExmMLq6MTCmBzeKRqvQ8HczAW3VkUHE5/WKhKObmXTbw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <link href="styles/bootstrap.min.cs" rel="stylesheet" />
+    </noscript>
+  </head>
 
-	<meta property="twitter:title" content="Pater999 - Portfolio" />
-	<meta property="twitter:description"
-		content="Ciao sono Pater999! Sono un giovane Full Stack Developer. Lavoro da remoto. C#, Typescript, .NET, React.js, Vue.js sono le tecnologie che utilizzo giornalmente per i miei progetti." />
+  <body>
+    <div id="mobile-menu-open" class="shadow-large">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <nav>
+      <header accesskey="2" tabindex="0">
+        <div id="mobile-menu-close">
+          <i class="fa fa-window-close shadow-large" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#experience">Experience</a>
+          </li>
+          <li>
+            <a href="#education">Education</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+        </ul>
+      </header>
+    </nav>
+    <!-- End header -->
 
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <section id="lead">
+      <div id="lead-content">
+        <img id="me" src="images/mattia.webp" alt="Me" />
+        <h2>______________________________________</h2>
+        <h1>Mattia Paternoster</h1>
+        <h2><u> Pater999 </u></h2>
+        <h2>
+          I'm
+          <span
+            class="typewriter"
+            data-period="2000"
+            data-type='
+            ["a backend developer.",
+            "a remote worker.",
+            "a passion driven developer.",
+            "a learner.", "a maker.",
+            "a problem solver.",
+            "italian."]'
+          >
+            <span class="wrap"></span>
+          </span>
+        </h2>
+        <nav class="social">
+          <ul>
+            <li>
+              <a href="mailto:mattia.pater@gmail.com" target="_blank" rel="noopener" accesskey="m">
+                <i class="fa fa-envelope" aria-hidden="true" title="Mattia's mail"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/pater999" target="_blank" rel="noopener" accesskey="g">
+                <i class="fab fa-github" aria-hidden="true" title="Mattia's gitHub profile"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/mattia-paternoster" target="_blank" rel="noopener" accesskey="l">
+                <i class="fab fa-linkedin" aria-hidden="true" title="Mattia's linkedin profile"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/pater999" target="_blank" rel="noopener" accesskey="t">
+                <i class="fab fa-telegram" aria-hidden="true" title="Mattia's telegram contact"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- End #lead-content -->
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <div id="lead-overlay"></div>
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+      <div id="lead-down">
+        <span>
+          <i class="fa fa-chevron-down" aria-hidden="true" title="More"></i>
+        </span>
+      </div>
+      <!-- End #lead-down -->
+    </section>
+    <!-- End #lead -->
 
-	<!-- Modernizr JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+    <section id="about" accesskey="a">
+      <h2 class="heading">About Me</h2>
+      <p>
+        Hi visitor, Mattia here! Welcome to my personal website and portfolio. I am a passionate remote software developer. 
+        Learning new things, making stuff, and exploring technology is my passion.<br />
+        <br />
+        I am currently involved in Backend web development using mainly Typescript. In the last period I have been studying serverless and microservices 
+        solutions based on AWS services. Previously, I had also worked using .NET and C# as programming language. I currently prefer to work on the backend, 
+        I like DevOps, but I had also the opportunity to use both React and Vue as frontend frameworks during my past.<br />
+      </p>
+    </section>
+    <!-- End #about -->
 
-</head>
+    <section id="experience" class="background-alt" accesskey="e">
+      <h2 class="heading">Experience</h2>
+      <div id="experience-timeline">
+        <div data-date="May 2022 - Present" class="shadow">
+          <h3><a href="https://unobravo.com" target="_blank" rel="noopener">Unobravo</a></h3>
+          <h4>Remote Backend Developer</h4>
+          Working in a <strong>Backend</strong> role implementing serverless and microservices solutions for a startup in the mental health sector.
+          <ul>
+            <li>Typescript, NodeJS, GraphQL, Apollo Server, Express, SQL, NOSQL databases and more...</li>
+            <li>Implemented new features using AWS lambda integrating AWS services.</li>
+            <li>Automating multiple deployments building CI/CD with github actions, sam cli and AWS cloud formation.</li>
+            <li>Agile environment</li>
+          </ul>
+        </div>
+       
+        <div data-date="March 2022 - May 2022" class="shadow">
+          <h3><a href="https://zakeke.com" target="_blank" rel="noopener">Zakeke</a></h3>
+          <h4>Remote Full Stack Developer</h4>
+          Worked as <strong>Full Stack Developer</strong> for an italian company that is building a product customization tool compatible with 
+          services, apps and eCommerce stores.
+          <ul>
+            <li>Backend development using .NET, SQL Server, CosmosDB, GraphQL.</li>
+            <li>Frontend development using React, Relay, Styled Components.</li>
+          </ul>
+        </div>
 
-<body>
-	<div class="fh5co-loader"></div>
-	<div id="page">
-		<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
-			style="background-image:url(images/cover_bg_Homepage.webp);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<div class="display-t js-fullheight">
-							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-								<div class="profile-thumb" style="background: url(images/profilePic.webp);"></div>
-								<h1><span>Pater999</span></h1>
-								<h3><span>Remote Full Stack Developer</span></h3>
-								<p>
-								<ul class="fh5co-social-icons">
-									<li><a href="mailto:mattia.pater@gmail.com"><i class="icon-mail4"
-												title="Mail"></i></a></li>
-									<li><a href="https://t.me/pater999"><i class="icon-telegram"
-												title="Telegram"></i></a></li>
-									<li><a href="https://linkedin.com/in/mattia-paternoster-946064167"><i
-												class="icon-linkedin3" title="Linkedin"></i></a></li>
-									<li><a href="https://github.com/Pater999"><i class="icon-github2"
-												title="Github"></i></a></li>
-								</ul>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
+        <div data-date="July 2020 - February 2022" class="shadow">
+          <h3><a href="https://zupit.it" target="_blank" rel="noopener">Zupit</a></h3>
+          <h4>Remote Full Stack Developer</h4>
+          Worked in many Agile projects with italians public and private clients in transport, engineering, insurance and medical sectors.
+          <ul>
+            <li>Web development along with various tools and technologies.</li>
+            <li>I mainly used Microsoft technologies for backend development (.NET, C#, ASP.NET, SQL Server, Entity Framework)</li>
+            <li>Monolithic architectures and REST api</li>
+            <li>Vue.js, React and a little bit of Angular for frontend development.</li>
+            <li>Developed IOS and Android APP and PWA using Ionic or Xamarin</li>
+          </ul>
+        </div>
+    </section>
+    <!-- End #experience -->
 
-		<div id="fh5co-resume" class="fh5co-bg-color">
-			<div class="container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Curriculum breve</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-md-offset-0">
-						<ul class="timeline">
-							<li class="timeline-heading text-center animate-box">
-								<div>
-									<h3>Attività lavorativa</h3>
-								</div>
-							</li>
-                                                        <li class="animate-box timeline">
-								<div class="timeline-badge"><i class="fa-solid fa-laptop-code"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Remote Software Developer </h3>
-										<span class="company"><a href="https://unobravo.com/">Unobravo</a> - maggio 2022 -
-											 in corso</span>
-									</div>
-									<div class="timeline-body">
-										<p>Agile Scrum, stack tecnologico:<br> Typescript, NodeJS, express, AWS, microservices, SQL, CI/CD
-											and more...</p>
-									</div>
-								</div>
-							</li>
-                            <li class="animate-box timeline-inverted">
-								<div class="timeline-badge"><i class="fa-solid fa-house-laptop"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Remote Full Stack Developer</h3>
-										<span class="company"><a href="https://www.zakeke.com/">Zakeke</a> - marzo 2022 -
-											maggio 2022</span>
-									</div>
-									<div class="timeline-body">
-										<p>Stack tecnologico:<br> .NET, C#, React, GraphQL, GIT</p>
-									</div>
-								</div>
-							</li>
-							
-							<li class="animate-box timeline">
-								<div class="timeline-badge"><i class="fa-solid fa-laptop-code"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Remote Full Stack Developer </h3>
-										<span class="company"><a href="https://www.zupit.it/">Zupit</a> - luglio 2020 -
-											febbraio 2022</span>
-									</div>
-									<div class="timeline-body">
-										<p>Metodologie Agile, stack tecnologico:<br> .NET, C#, Vue.js, Ionic, React, SQL
-											SERVER, GIT</p>
-									</div>
-								</div>
-							</li>
-							<li class="timeline-heading text-center animate-box">
-								<div>
-									<h3>Progetti principali</h3>
-								</div>
-							</li>
-							<li class="animate-box timeline-inverted">
-								<div class="timeline-badge"><i class="icon-android"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Sanità Trentina</h3>
-										<span class="company">App mobile android - maggio 2020 - luglio 2020</span>
-									</div>
-									<div class="timeline-body">
-										<p>Visualizza le farmacie di turno e il numero di persone in attesa nei pronto
-											soccorso della provincia di Trento!</p>
-									</div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="icon-telegram"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">CoronaVirus Trentino</h3>
-										<span class="company">Bot telegram - 2020 - 2021</span>
-									</div>
-									<div class="timeline-body">
-										<p>Monitora gli effetti del COVID-19 nel mondo, in Italia, in Trentino. Tante
-											funzionalità e informazioni</p>
-									</div>
-								</div>
-							</li>
-							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge"><i class="icon-telegram"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Trentino in Bus</h3>
-										<span class="company">Bot telegram - 2019 - In corso</span>
-									</div>
-									<div class="timeline-body">
-										<p>Consulta orari e ritardi in tempo reale di tutti i trasporti della Provincia
-											di Trento. Tutto in un unico bot.</p>
-									</div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="fa-solid fa-train"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Ritardi Treni</h3>
-										<span class="company">Sito web Angular5 - 2018</span>
-									</div>
-									<div class="timeline-body">
-										<p>Consulta orari e ritardi in tempo reale dei Treni italiani. Molte
-											funzionalità e caratteristiche disponibili.</p>
-									</div>
-								</div>
-							</li>
+    <section id="education" accesskey="r">
+      <h2 class="heading">Education</h2>
+      <div class="education-block shadow">
+        <h3><a href="https://www.unitn.it/en" target="_blank" rel="noopener">University of Trento</a></h3>
+        <span class="education-date">September 2018 - March 2022</span>
+        <h4>Bachelor degree in Computer Science</h4>
+        <ul>
+          <li>Spent most of my time self-learning and learning new technologies.</li>
+          <li>Learned about core CS concepts like Data Structures, Algorithms, Operating Systems, Databases, Networking etc.</li>
+        </ul>
+      </div>
+      <!-- End .education-block -->
+      <div class="education-block shadow">
+        <h3><a href="https://www.marconirovereto.it/" target="_blank" rel="noopener">ITT Marconi Rovereto</a></h3>
+        <span class="education-date">2013 - 2018</span>
+        <h4>Secondary</h4>
+        <ul>
+          <li>Graduated Secondary in Computer Science.</li>
+        </ul>
+      </div>
 
-							<br>
-							<li class="timeline-heading text-center animate-box">
-								<div>
-									<h3>Educazione</h3>
-								</div>
-							</li>
-							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Laurea triennale</h3>
-										<span class="company"><a href="https://www.unitn.it/">Università di Trento</a> -
-											2018 - marzo 2022</span>
-									</div>
-									<div class="timeline-body">
-										<p>Laurea triennale in Informatica percorso
-											"Scienze e Tecnologie Informatiche"</p>
-									</div>
-								</div>
-							</li>
-							<li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="fa-solid fa-school"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Diploma</h3>
-										<span class="company"><a href="https://www.marconirovereto.it/">ITT Marconi</a>
-											- 2013 - 2018</span>
-									</div>
-									<div class="timeline-body">
-										<p>Diploma di Istituto Tecnico Settore Tecnologico Indirizzo
-											"INFORMATICA E TELECOMUNICAZIONI" articolazione
-											"INFORMATICA"</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+      <!-- End .education-block -->
+    </section>
+    <!-- End #education -->
 
+    <section id="projects" class="background-alt" accesskey="p">
+      <h2 class="heading">Projects</h2>
+      <div class="projects-grid">
+        <div class="project shadow">
+          <div class="project-info">
+            <h3>Trentino In Bus</h3>
+            <p>Telegram bot for local public transports 🚌</p>
+            <a href="https://t.me/trentinoinbusbot" target="_blank" rel="noopener" class="btn-rounded-blue"
+              >View Project</a
+            >
+          </div>
+        </div>
+        <div class="project shadow">
+          <div class="project-info">
+            <h3>Trentino Trasporti GraphQL</h3>
+            <p>GraphQL backend for Trentino Trasporti 🚅🚌</p>
+            <a
+              href="https://github.com/Pater999/trentino-trasporti-graphql"
+              target="_blank"
+              rel="noopener"
+              class="btn-rounded-blue"
+              >View Project</a
+            >
+          </div>
+        </div>
 
-		<div id="fh5co-features" class="animate-box">
-			<div class="container">
-				<div class="services-padding">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-							<h2>Le mie competenze</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-browser"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Web Developer</h3>
-									<p>Sviluppo web utilizzando Framework e/o linguaggi; in particolare VueJs, React,
-								        HTML, CSS, Javascript, Typescript, NodeJS</p>
-								</div>
-							</div>
-						</div>
+        <div class="project shadow">
+          <div class="project-info">
+            <h3>Osservaprezzi Carburanti</h3>
+            <p>API wrapper for italian fuel api ⛽🚗</p>
+            <a href="https://github.com/Pater999/osservaprezzi-carburanti-node" target="_blank" rel="noopener" class="btn-rounded-blue"
+              >View Project</a
+            >
+          </div>
+        </div>
+        <div class="project shadow">
+          <div class="project-info">
+            <h3>Physics exam simulator</h3>
+            <p>Exam simulator builded in Vue.js 📘💯</p>
+            <a href="https://github.com/Pater999/UNITN-disi-fisica-simulatore-vue" target="_blank" rel="noopener" class="btn-rounded-blue"
+              >View Project</a
+            >
+          </div>
+        </div>
+        <div class="project shadow">
+          <div class="project-info">
+            <h3>Sanità Trentina</h3>
+            <p>Android app  🏥🚑</p>
+            <a href="https://play.google.com/store/apps/details?id=tech.pater999.sanitaTrentina" target="_blank" rel="noopener" class="btn-rounded-blue"
+              >View Project</a
+            >
+          </div>
+        </div>
+        <div class="project shadow">
+          <div class="project-info">
+            <h3>Coronavirus Trentino</h3>
+            <p>Telegram bot to monitor covid19 cases 🦠</p>
+            <a href="https://t.me/coronavirustrentinobot" target="_blank" rel="noopener" class="btn-rounded-blue"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- <p>
+        <a href="projects" target="_blank" rel="noopener" class="btn-rounded-blue">University projects and notes</a>
+      </p> -->
+    </section>
 
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-desktop"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Developer</h3>
-									<p>Ottima conoscenza di .NET e dei principali linguaggi di programmazione. In
-										particolare di C#, Javascript, Typescript</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-telegram"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Telegram Bot Developer</h3>
-									<p>Esperienza nello sviluppo di bot Telegram (App messaggistica) utilizzando NodeJS + Typescript
-									</p>
-								</div>
-							</div>
-						</div>
+    <!-- End #projects -->
 
+    <section id="skills" accesskey="s">
+      <h2 class="heading">Skills</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=javascript" target="_blank" rel="noopener"
+            ><i class="devicon-nodejs-plain colored"></i> NodeJS</a
+          >
+        </li>
 
-					</div>
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=javascript" target="_blank" rel="noopener"
+            ><i class="devicon-javascript-plain colored"></i> JavaScript</a
+          >
+        </li>
 
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=typescript" target="_blank" rel="noopener"
+            ><i class="devicon-typescript-plain colored"></i> TypeScript</a
+          >
+        </li>
 
-					<div class="row">
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-mobile"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Mobile Developer</h3>
-									<p>Sviluppo di applicazioni mobile (Android, IOS) utilizzando Ionic4+ e VueJs oppure ReactNative
-									</p>
-								</div>
-							</div>
-						</div>
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=c%23" target="_blank" rel="noopener"
+          ><i class="devicon-csharp-plain colored"></i> C#</a
+          >
+        </li>
 
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-terminal"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>DevOps</h3>
-									<p>Discreta Esperienza con i servizi di Azure e AWS. CI/CD con GitHub actions.</p>
-								</div>
-							</div>
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=c%23" target="_blank" rel="noopener"
+          ><i class="devicon-dot-net-plain colored"></i> .Net</a
+          >
+        </li>
 
-						</div>
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-instagram"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Marketing aziendale</h3>
-									<p>Esperienza nella gestione di profili di piccole attività commerciali. Gestione
-										account Instagram/Facebook/Google.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=shell" target="_blank" rel="noopener"
+            ><i class="devicon-bash-plain"></i> Bash</a
+          >
+        </li>
 
-		<div id="fh5co-skills" class="animate-box">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Skills</h2>
-					</div>
-				</div>
-				<div class="row row-pb-md">
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="98"><span><strong>HTML5/CSS3</strong>98%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="95"><span><strong>Vue.js</strong>95%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="93"><span><strong>React.js</strong>93%</span></div>
-					</div>
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=javascript" target="_blank" rel="noopener"
+            ><i class="devicon-react-original colored"></i> React</a
+          >
+        </li>
 
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="98"><span><strong>NodeJS</strong>98%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="99"><span><strong>Telegram API</strong>99%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="92"><span><strong>RDBMS</strong>92%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="92"><span><strong>.NET</strong>92%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="97"><span><strong>GIT</strong>97%</span></div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="progress-wrap">
-							<h3><span class="name-left">Ionic</span><span class="value-right">90%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
-									aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								</div>
-							</div>
-						</div>
-						<div class="progress-wrap">
-							<h3><span class="name-left">C#</span><span class="value-right">98%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
-									aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width:98%">
-								</div>
-							</div>
-						</div>
-						<div class="progress-wrap">
-							<h3><span class="name-left">Entity Framework / .NET CORE</span><span class="value-right">88%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
-									aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width:88%">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=vue" target="_blank" rel="noopener"
+          ><i class="devicon-vuejs-plain colored"></i> Vue</a
+          >
+        </li>
 
-						<div class="progress-wrap">
-							<h3><span class="name-left">Express.js</span><span class="value-right">88%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-striped active" role="progressbar"
-									aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width:88%">
-								</div>
-							</div>
-						</div>
-						<div class="progress-wrap">
-							<h3><span class="name-left">MongoDB</span><span class="value-right">75%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-									aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-								</div>
-							</div>
-						</div>
-						<div class="progress-wrap">
-							<h3><span class="name-left">Redis</span><span class="value-right">50%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-									aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=html" target="_blank" rel="noopener"
+            ><i class="devicon-html5-plain colored"></i> HTML</a
+          >
+        </li>
 
-		<div id="fh5co-work" class="fh5co-bg-dark">
-			<div class="container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Portfolio e progetti</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="trentinoinbus" class="work"
-							style="background-image: url(images/TrentinoInBusBot.webp);">
-							<div class="desc">
-								<h3>Trentino in bus</h3>
-								<span>Telegram Bot</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="coronavirustrentino" class="work"
-							style="background-image: url(images/CoronaVirusChannel.webp);">
-							<div class="desc">
-								<h3>CoronaVirus Trentino</h3>
-								<span>Telegram Channel</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://t.me/coronavirustrentinobot" class="work"
-							style="background-image: url(images/CoronaVirusBot.webp);">
-							<div class="desc">
-								<h3>CoronaVirus Trentino Bot</h3>
-								<span>Telegram Bot</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://t.me/trentinoinbuschannel" class="work"
-							style="background-image: url(images/TrentinoInBusChannel.webp);">
-							<div class="desc">
-								<h3>Trentino in Bus CHANNEL</h3>
-								<span>Telegram Channel</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="#" class="work"
-							style="background-image: url(images/ritardiTreni.webp);">
-							<div class="desc">
-								<h3>Ritardi Treni</h3>
-								<span>Website - !! DISMESSO</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://github.com/Pater999/angular-gestione-studenti-uni" class="work"
-							style="background-image: url(images/GestioneStudenti.webp);">
-							<div class="desc">
-								<h3>Gestione studenti</h3>
-								<span>Angular Web App</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="sanita-trentina" class="work"
-							style="background-image: url(images/SanitaTrentina.webp);">
-							<div class="desc">
-								<h3>Sanità Trentina</h3>
-								<span>Applicazione android</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="unitn-progetti" class="work" style="background-image: url(images/ProgettiUnitn.webp);">
-							<div class="desc">
-								<h3>UNITN progetti</h3>
-								<span>Progetti Universitari</span>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="fh5co-about" class="animate-box">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Contatti</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<ul class="info">
-							<li><span class="first-block">Nome:</span><span class="second-block">Mattia</span></li>
-							<li><span class="first-block">Cognome:</span><span class="second-block">Paternoster</span>
-							</li>
-							<li><span class="first-block">Email:</span><span
-									class="second-block">mattia.pater@gmail.com</span></li>
-							<li><span class="first-block">Sito web:</span><span
-									class="second-block">www.pater999.it</span></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=css" target="_blank" rel="noopener"
+            ><i class="devicon-css3-plain colored"></i> CSS</a
+          >
+        </li>
+
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=sass" target="_blank" rel="noopener"
+            ><i class="devicon-sass-original colored"></i> Sass</a
+          >
+        </li>
+
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=css" target="_blank" rel="noopener"
+            ><i class="devicon-bootstrap-plain colored"></i> Bootstrap</a
+          >
+        </li>
+
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=plsql" target="_blank" rel="noopener"
+            ><i class="devicon-mysql-plain colored"></i> MySQL</a
+          >
+        </li>
+
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=plsql" target="_blank" rel="noopener"
+            ><i class="devicon-postgresql-plain colored"></i> PostgreSQL</a
+          >
+        </li>
+
+        <li><i class="devicon-mongodb-plain colored"></i> MongoDB</li>
+        <li><i class="devicon-redis-plain colored"></i> Redis</li>
+
+        <li><i class="devicon-graphql-plain colored"></i> GraphQL</li>
+
+        <li><i class="devicon-jest-plain colored"></i> Jest</li>
+
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=dockerfile" target="_blank" rel="noopener"
+            ><i class="devicon-docker-plain colored"></i> Docker</a
+          >
+        </li>
+
+        <li><i class="devicon-amazonwebservices-plain colored"></i> AWS</li>
+
+        <li><i class="devicon-firebase-plain colored"></i> Firebase</li>
+
+        <li><i class="devicon-heroku-plain colored"></i> Heroku</li>
+
+        <li><i class="devicon-digitalocean-plain colored"></i> Digitalocean</li>
 
 
+        <li><i class="devicon-visualstudio-plain" style="color: #21a0eb"></i> VS Code</li>
 
-		<div id="fh5co-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<p>&copy; Pater999.it. Tutti i diritti riservati.<br>
-							<a href="/">Homepage</a> -
-							<a href="/cookie-policy">Cookie policy</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
+        <li><i class="devicon-git-plain colored"></i> Git</li>
 
-		<div class="gototop js-top">
-			<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-		</div>
-	</div>
+        <li><i class="devicon-npm-original-wordmark colored"></i> NPM</li>
 
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<!-- jQuery Easing -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
-		crossorigin="anonymous"></script>
-	<!-- Bootstrap -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
-	<!-- Waypoints -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
-		crossorigin="anonymous"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Easy PieChart -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"
-		crossorigin="anonymous"></script>
+        <li><i class="devicon-github-plain "></i> Github</li>
+        <li><i class="devicon-ionic-original colored"></i> Ionic</li>
+        <li><i class="devicon-slack-plain "></i> Slack</li>
+        <li><i class="devicon-jira-plain colored"></i> Jira</li>
+       
 
-	<!-- Main -->
-	<script src="js/main.js"></script>
+        <li>
+          <a href="https://github.com/pater999?tab=repositories&q=&language=shell" target="_blank" rel="noopener"
+            ><i class="devicon-linux-plain"></i> Linux</a
+          >
+        </li>
 
-</body>
+        <li><i class="fab fa-markdown"></i> Markdown</li>
 
+        <li><i class="devicon-xamarin-plain colored"></i> Xamarin</li>
+
+        <li>
+          <a
+            href="https://github.com/pater999?tab=repositories&q=&language=jupyter+notebook"
+            target="_blank"
+            rel="noopener"
+            ><i class="devicon-jupyter-plain colored"></i> Jupyter</a
+          >
+        </li>
+      
+
+      </ul>
+    </section>
+    <!-- End #skills -->
+
+    <footer>
+      <div class="top">
+        <span id="to-top">
+          <i class="fa fa-chevron-up" aria-hidden="true" title="Top"></i>
+        </span>
+      </div>
+      <div class="copyright">
+        <p>Template by <a href="https://github.com/pater999/pater999.github.io">Abhishek Keshri</a></p>
+      </div>
+    </footer>
+    <!-- End footer -->
+
+    <!-- Fixes for Firefox and IE -->
+    <script>
+      var isIE = !!window.MSInputMethodContext && !!document.documentMode;
+      var isFirefox = navigator.userAgent.toLowerCase().indexOf("firefox") > -1;
+
+      if (isIE || isFirefox) {
+        var font = document.createElement("link");
+        font.rel = "stylesheet";
+        font.type = "text/css";
+        font.href = "https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap";
+        document.head.appendChild(font);
+        var fontAwesome = document.createElement("link");
+        fontAwesome.rel = "stylesheet";
+        fontAwesome.type = "text/css";
+        fontAwesome.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css";
+        document.head.appendChild(fontAwesome);
+        var devicon = document.createElement("link");
+        devicon.rel = "stylesheet";
+        devicon.type = "text/css";
+        devicon.href = "https://cdnjs.cloudflare.com/ajax/libs/devicon/2.4/devicon.min.css";
+        document.head.append(devicon);
+        var bootstrap = document.createElement("link");
+        bootstrap.rel = "stylesheet";
+        bootstrap.type = "text/css";
+        bootstrap.href = "https://cdnjs.cloudflare.com/ajax/libs/devicon/2.4/devicon.min.css";
+        document.head.append(bootstrap);
+      }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/scripts.min.js"></script>
+  </body>
 </html>
