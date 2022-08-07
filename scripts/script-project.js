@@ -161,5 +161,6 @@ const devicons = {
     "Vim Script": '<i class="devicon-vim-plain colored"></i> Vim Script',
     Vue: '<i class="devicon-vuejs-plain colored"></i> Vue',
     "Standard ML": '<i class="devicon-maya-plain colored"></i> Standard ML',
+    TeX: '<i class="devicon-latex-original"></i> Latex',
     null: '<i class="devicon-markdown-original"></i> Markdown',
 };
