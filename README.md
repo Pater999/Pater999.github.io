@@ -1,9 +1,9 @@
 <div align = "center">
 
-<h1><a href="https:/pater999.it/">pater999.it</a></h1></div>
+<h1><a href="https://pater999.it/">pater999.it</a></h1></div>
 
 This is the source for my personal portfolio site of the same name.
-[Live version](https:/pater999.it)
+[Live version](https://pater999.it)
 
 ## Sections
 
