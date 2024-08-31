@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Personal site of Mattia Paternoster also know as Pater999. An italian remote backend developer based in Trento." />
+    <meta name="description" content="Personal site of Mattia Paternoster also know as Pater999. An italian remote backend software engineer based in Trento." />
     <meta name="keywords"
-		content="Mattia, Paternoster, Curriculum, Pater999, Portfolio, developer, full remote, full stack developer, backend developer" />
+		content="Mattia, Paternoster, Curriculum, Pater999, Portfolio, developer, full remote, full stack developer, backend developer, backend engineer, software engineer" />
     <title>Pater999's personal website & portfolio</title>
     <link rel="icon" href="favicon.ico" type="image/ico"/>
 
@@ -23,12 +23,12 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
-    <link 
-      rel="stylesheet" 
-      href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css" 
-      integrity="sha512-X2hbziex+UPQ+KdI4BWI+39jEDhf2Smc6bfFI/FTIzWnt7mbwZCUU4RWalnMfxtHCpISlexzmd2kvPFJCliiPA==" 
+    <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css" 
+      integrity="sha512-BlFCHJWngPEHme4TwlEob6dPLfoNaQBTTISPwr4344nxR353w2vgGZ7GiSadbbeR20cJeeM0u1I2lAZuIZ1aOQ==" 
       crossorigin="anonymous" 
-      referrerpolicy="no-referrer" />
+      referrerpolicy="no-referrer" 
+    />
     <link rel="preload" href="styles/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link href="styles/styles.css" rel="stylesheet" />
 
@@ -104,7 +104,7 @@
             class="typewriter"
             data-period="2000"
             data-type='
-            ["a backend developer.",
+            ["a backend engineer.",
             "a remote worker.",
             "a passion driven developer.",
             "a fast learner.", "a maker.",
@@ -155,12 +155,12 @@
     <section id="about" accesskey="a">
       <h2 class="heading">About Me</h2>
       <p>
-        Hi visitor, Mattia here! Welcome to my personal website and portfolio. I am a passionate remote software developer. 
+        Hi visitor, Mattia here! Welcome to my personal website and portfolio. I am a passionate remote software engineer. 
         Learning new things, making stuff, and exploring technology is my passion.<br />
         <br />
-        I am currently involved in Backend web development using mainly Typescript. In the last period I have been studying serverless and microservices 
-        solutions based on AWS services. Previously, I had also worked using .NET and C# as programming language. I currently prefer to work on the backend, 
-        I like DevOps, but I had also the opportunity to use both React and Vue as frontend frameworks during my past.<br />
+        I am currently focused on backend development, where I primarily work with TypeScript and Node.js to build scalable monolithic, serverless and microservices solutions using AWS services. My recent projects involve designing and implementing architectures that utilize AWS Lambda, DynamoDB, SQS, and other AWS tools to create efficient, high-performance systems. I am experienced in building CI/CD pipelines and automating deployments to streamline development workflows and enhance productivity.<br />
+        <br />
+        Previously, I worked extensively with .NET and C#, contributing to robust backend systems and RESTful APIs. My frontend experience includes using React and Vue to develop dynamic, user-friendly interfaces. Although my primary interest lies in backend development and DevOps, my diverse skill set allows me to integrate and collaborate effectively across different layers of the technology stack. <br />
       </p>
     </section>
     <!-- End #about -->
@@ -170,13 +170,15 @@
       <div id="experience-timeline">
         <div data-date="May 2022 - Present" class="shadow">
           <h3><a href="https://unobravo.com" target="_blank" rel="noopener">Unobravo</a></h3>
-          <h4>Remote Backend Developer</h4>
+          <h4>Remote Backend Engineer</h4>
           Working in a <strong>Backend</strong> role implementing serverless and microservices solutions for a startup in the mental health sector.
           <ul>
             <li>Typescript, NodeJS, GraphQL, Apollo Server, Express, SQL, NOSQL databases and more...</li>
+            <li>IaC with Terraform and Pulumi (typescript)</li>
             <li>Implemented new features using AWS lambda integrating AWS services.</li>
-            <li>Automating multiple deployments building CI/CD with github actions, sam cli and AWS cloud formation.</li>
-            <li>Agile environment</li>
+            <li>Automated deployments and built CI/CD pipelines with GitHub Actions, SAM CLI, and AWS CloudFormation, streamlining development workflows and ensuring consistent, reliable releases.</li>
+            <li>Worked in an Agile environment, collaborating with cross-functional teams including designers, frontend developers, and product managers to deliver high-quality software.</li>
+            <li>Enhanced observability with tools such as Grafana, Prometheus, and OpenTelemetry, improving monitoring and system reliability.</li>
           </ul>
         </div>
        
@@ -236,15 +238,6 @@
       <div class="projects-grid">
         <div class="project shadow">
           <div class="project-info">
-            <h3>Trentino In Bus</h3>
-            <p>Telegram bot for local public transports 🚌</p>
-            <a href="https://t.me/trentinoinbusbot" target="_blank" rel="noopener" class="btn-rounded-blue"
-              >View Project</a
-            >
-          </div>
-        </div>
-        <div class="project shadow">
-          <div class="project-info">
             <h3>Trentino Trasporti GraphQL</h3>
             <p>GraphQL backend for Trentino Trasporti 🚅🚌</p>
             <a
@@ -256,7 +249,6 @@
             >
           </div>
         </div>
-
         <div class="project shadow">
           <div class="project-info">
             <h3>Osservaprezzi Carburanti</h3>
@@ -275,28 +267,9 @@
             >
           </div>
         </div>
-        <div class="project shadow">
-          <div class="project-info">
-            <h3>Sanità Trentina</h3>
-            <p>Android app  🏥🚑</p>
-            <a href="https://play.google.com/store/apps/details?id=tech.pater999.sanitaTrentina" target="_blank" rel="noopener" class="btn-rounded-blue"
-              >View Project</a
-            >
-          </div>
-        </div>
-        <div class="project shadow">
-          <div class="project-info">
-            <h3>Coronavirus Trentino</h3>
-            <p>Telegram bot to monitor covid19 cases 🦠</p>
-            <a href="https://t.me/coronavirustrentinobot" target="_blank" rel="noopener" class="btn-rounded-blue"
-              >View Project</a
-            >
-          </div>
-        </div>
-      </div>
-      <p>
-        <a href="university-projects" class="btn-rounded-blue">University projects and notes</a>
-      </p>
+        <p>
+          <a href="university-projects" class="btn-rounded-blue">University projects and notes</a>
+        </p>
     </section>
 
     <!-- End #projects -->
@@ -365,12 +338,6 @@
         </li>
 
         <li>
-          <a href="https://github.com/pater999?tab=repositories&q=&language=sass" target="_blank" rel="noopener"
-            ><i class="devicon-sass-original colored"></i> Sass</a
-          >
-        </li>
-
-        <li>
           <a href="https://github.com/pater999?tab=repositories&q=&language=css" target="_blank" rel="noopener"
             ><i class="devicon-bootstrap-plain colored"></i> Bootstrap</a
           >
@@ -389,6 +356,7 @@
         </li>
 
         <li><i class="devicon-mongodb-plain colored"></i> MongoDB</li>
+        <li><i class="devicon-dynamodb-plain colored"></i> DynamoDB</li>
         <li><i class="devicon-redis-plain colored"></i> Redis</li>
 
         <li><i class="devicon-graphql-plain colored"></i> GraphQL</li>
@@ -402,6 +370,16 @@
         </li>
 
         <li><i class="devicon-amazonwebservices-plain colored"></i> AWS</li>
+
+        <li><i class="devicon-opentelemetry-plain colored"></i> OpenTelemetry</li>
+
+        <li><i class="devicon-grafana-plain colored"></i> Grafana</li>
+
+        <li><i class="devicon-prometheus-plain colored"></i> Prometheus</li>
+
+        <li><i class="devicon-terraform-plain colored"></i> Terraform</li>
+
+        <li><i class="devicon-pulumi-plain colored"></i> Pulumi</li>
 
         <li><i class="devicon-firebase-plain colored"></i> Firebase</li>
 
@@ -417,6 +395,8 @@
         <li><i class="devicon-npm-original-wordmark colored"></i> NPM</li>
 
         <li><i class="devicon-github-plain "></i> Github</li>
+        <li><i class="devicon-githubactions-plain colored"></i> Github Actions</li>
+        
         <li><i class="devicon-ionic-original colored"></i> Ionic</li>
         <li><i class="devicon-slack-plain "></i> Slack</li>
         <li><i class="devicon-jira-plain colored"></i> Jira</li>
@@ -477,7 +457,7 @@
         var devicon = document.createElement("link");
         devicon.rel = "stylesheet";
         devicon.type = "text/css";
-        devicon.href = "https://cdnjs.cloudflare.com/ajax/libs/devicon/2.4/devicon.min.css";
+        devicon.href = "https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css";
         document.head.append(devicon);
         var bootstrap = document.createElement("link");
         bootstrap.rel = "stylesheet";
