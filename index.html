@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>Mattia Paternoster — Senior Platform &amp; Backend Engineer</title>
+    <meta
+      name="description"
+      content="Senior Software Engineer specialising in backend systems, platform engineering, and SRE. Node.js, TypeScript, Kubernetes, AWS, GitOps. Based in Trento, Italy — fully remote."
+    />
+    <link rel="canonical" href="https://pater999.it/" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pater999.it/" />
+    <meta property="og:title" content="Mattia Paternoster — Senior Platform &amp; Backend Engineer" />
+    <meta
+      property="og:description"
+      content="Senior Software Engineer specialising in backend systems, platform engineering, and SRE. Node.js, TypeScript, Kubernetes, AWS, GitOps."
+    />
+    <meta property="og:image" content="https://pater999.it/images/mattia.webp" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mattia Paternoster — Senior Platform &amp; Backend Engineer" />
+    <meta
+      name="twitter:description"
+      content="Backend · SRE · Platform Engineering. Node.js, TypeScript, Kubernetes, AWS."
+    />
+    <meta name="twitter:image" content="https://pater999.it/images/mattia.webp" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+
+    <!-- Fonts: Inter — only 3 weights -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/custom.css" />
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mattia Paternoster",
+        "jobTitle": "Senior Software Engineer",
+        "url": "https://pater999.it",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Trento",
+          "addressCountry": "IT"
+        },
+        "sameAs": ["https://github.com/Pater999", "https://linkedin.com/in/mattia-paternoster", "https://t.me/pater999"]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ======================================================
+       NAVIGATION
+  ====================================================== -->
+    <nav id="nav" class="px-6 md:px-16 py-4 flex items-center justify-between">
+      <a href="#" class="text-sm font-black tracking-widest text-white z-50 relative"
+        >MP<span style="color: var(--orange)">_</span></a
+      >
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button
+        id="hamburger"
+        class="md:hidden text-slate-400 hover:text-white transition-colors z-50 relative"
+        aria-label="Toggle navigation menu"
+      >
+        <svg
+          id="icon-open"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg
+          id="icon-close"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 hidden"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation">
+      <a href="#about" class="nav-link" onclick="closeMobileMenu()">About</a>
+      <a href="#experience" class="nav-link" onclick="closeMobileMenu()">Experience</a>
+      <a href="#skills" class="nav-link" onclick="closeMobileMenu()">Skills</a>
+      <a href="#contact" class="nav-link" onclick="closeMobileMenu()">Contact</a>
+    </div>
+
+    <!-- ======================================================
+       HERO
+  ====================================================== -->
+    <section id="hero" class="relative min-h-screen flex flex-col overflow-hidden pt-16">
+      <canvas id="constellation" class="absolute inset-0 w-full h-full" aria-hidden="true"></canvas>
+
+      <div class="relative z-10 flex-1 flex items-center px-6 md:px-16 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full max-w-6xl mx-auto">
+          <!-- Left: Identity -->
+          <div class="flex flex-col justify-center">
+            <div class="discipline-tag">Senior Software Engineer</div>
+            <h1 class="glitch-name" data-text="Mattia Paternoster">Mattia<br /><em>Paternoster</em></h1>
+            <p class="mt-5 text-sm leading-relaxed max-w-md" style="color: var(--text-muted)">
+              Passion-driven full-stack engineer with a strong focus on backend and platform infrastructure. From React &amp; Vue.js frontends to Node.js APIs, GitOps pipelines, and full-stack observability. Proven across startups and scaleups in Fintech, HealthTech, eCommerce, insurance and transport.
+            </p>
+            <p class="mt-2 text-xs" style="color: var(--text-muted)">📍 Trento, Italy &nbsp;·&nbsp; 🌍 Fully Remote</p>
+            <div class="flex flex-wrap gap-3 mt-8">
+              <a href="#experience" class="btn-primary">View Work</a>
+              <a href="#contact" class="btn-outline">Contact</a>
+            </div>
+          </div>
+
+          <!-- Right: Avatar + Pillars -->
+          <div class="flex flex-col items-center lg:items-start">
+            <div class="pulse-wrapper">
+              <div class="pulse-ring"></div>
+              <div class="pulse-ring"></div>
+              <div class="pulse-ring"></div>
+              <img src="images/mattia.webp" alt="Mattia Paternoster" class="avatar" width="120" height="120" />
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 w-full max-w-sm lg:max-w-full">
+              <div class="pillar pillar-be">
+                <div class="pillar-label">Backend</div>
+                <div class="pillar-tags">Node.js · TypeScript · C# · GraphQL · NestJS · Kafka · PostgreSQL</div>
+              </div>
+              <div class="pillar pillar-sre">
+                <div class="pillar-label">SRE</div>
+                <div class="pillar-tags">OTel · Prometheus · Grafana · Loki · NewRelic</div>
+              </div>
+              <div class="pillar pillar-pe">
+                <div class="pillar-label">Platform</div>
+                <div class="pillar-tags">K8s · ArgoCD · FluxCD · Terraform · Pulumi · GCP ·AWS · GitOps</div>
+              </div>
+              <div class="pillar pillar-fe">
+                <div class="pillar-label">Frontend</div>
+                <div class="pillar-tags">React · Vue.js · Next.js · React Native</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Metrics bar -->
+      <div class="relative z-10 border-t px-6 md:px-16 py-5" style="border-color: var(--border)">
+        <div class="flex flex-wrap gap-6 md:gap-12 max-w-6xl mx-auto">
+          <div class="metric">
+            <span id="uptime-val" class="metric-val">99.97%</span>
+            <span class="metric-label">uptime mindset</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val"><span data-exp-years>6</span>+</span>
+            <span class="metric-label">years experience</span>
+          </div>
+          <div class="metric">
+            <span id="commit-val" class="metric-val">2,847</span>
+            <span class="metric-label">commits</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">100%</span>
+            <span class="metric-label">remote</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+       ABOUT
+  ====================================================== -->
+    <section id="about" class="relative z-10 px-6 md:px-16 py-24">
+      <div class="max-w-6xl mx-auto">
+        <div data-reveal>
+          <div class="section-tag">About</div>
+          <h2 class="section-title">Who I am</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
+          <div data-reveal data-reveal-delay="1">
+            <p class="text-sm leading-7" style="color: var(--text-muted)">
+              I'm a Senior Software Engineer who loves building things that scale and last. From clean GraphQL APIs and event-driven backends to GitOps pipelines and cloud-native platforms — I care deeply about reliability, developer experience, and systems that are a pleasure to operate. I strongly believe the best solution is almost always the simplest one.</p>
+            <p class="text-sm leading-7 mt-4" style="color: var(--text-muted)">
+              Pragmatic by nature, I understand business needs and I'm not afraid to challenge them — I bring opinions to the table, not just implementations. I'm also known for getting up to speed quickly on new and complex codebases, turning ambiguity into clarity fast.
+            </p>
+            <p class="text-sm leading-7 mt-4" style="color: var(--text-muted)">
+              My sweet spot is the intersection of backend engineering and platform infrastructure. I work across the full stack — Node.js, TypeScript and .NET on the backend; React and Vue.js on the front; Kubernetes, ArgoCD, Terraform and Pulumi in the cloud. I'm a firm believer in the SRE mindset: if it's not observable, it's not production-ready.
+            </p>
+            <p class="text-sm leading-7 mt-4" style="color: var(--text-muted)">
+              Outside of work I run a personal homelab with cloud and local Kubernetes clusters — exploring self-hosted tooling, AI integrations and whatever technology catches my curiosity next. Continuous learning isn't a buzzword for me; it's how I operate.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4" data-reveal data-reveal-delay="2">
+            <div class="p-4 rounded-xl border" style="border-color: var(--border); background: var(--bg-card)">
+              <div class="text-xl mb-2">⚙️</div>
+              <div class="text-sm font-bold mb-1" style="color: var(--orange)">Backend</div>
+              <div class="text-sm leading-6" style="color: var(--text-muted)">
+                Node.js · TypeScript · .NET — from AWS Lambda serverless to NestJS monoliths, GraphQL APIs, Kafka event streams and multi-database architectures
+              </div>
+            </div>
+            <div class="p-4 rounded-xl border" style="border-color: var(--border); background: var(--bg-card)">
+              <div class="text-xl mb-2">📡</div>
+              <div class="text-sm font-bold mb-1" style="color: var(--cyan)">SRE</div>
+              <div class="text-sm leading-6" style="color: var(--text-muted)">
+                OTel, Prometheus, Grafana &amp; Loki — end-to-end observability across traces, metrics and logs
+              </div>
+            </div>
+            <div class="p-4 rounded-xl border" style="border-color: var(--border); background: var(--bg-card)">
+              <div class="text-xl mb-2">🏗️</div>
+              <div class="text-sm font-bold mb-1" style="color: var(--purple)">Platform</div>
+              <div class="text-sm leading-6" style="color: var(--text-muted)">
+                AWS, GCP &amp; Oracle Cloud — GitOps with ArgoCD &amp; FluxCD, IaC via Terraform &amp; Pulumi, golden paths and one-click local dev environments
+              </div>
+            </div>
+            <div class="p-4 rounded-xl border" style="border-color: var(--border); background: var(--bg-card)">
+              <div class="text-xl mb-2">🌍</div>
+              <div class="text-sm font-bold mb-1" style="color: var(--text)">Remote-First</div>
+              <div class="text-sm leading-6" style="color: var(--text-muted)">
+                <span data-exp-years>6</span>+ years in distributed Scrum &amp; Kanban teams across Fintech, HealthTech and startup environments
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+       EXPERIENCE
+  ====================================================== -->
+    <section id="experience" class="relative z-10 px-6 md:px-16 py-24">
+      <div class="max-w-6xl mx-auto">
+        <div data-reveal>
+          <div class="section-tag">Experience</div>
+          <h2 class="section-title">Where I've worked</h2>
+          <p class="section-sub"><span data-exp-years>6</span>+ years across startups and scale-ups, fully remote.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Qomodo -->
+          <div class="timeline-item timeline-item--current" data-reveal data-reveal-delay="1">
+            <div class="exp-card">
+              <div class="exp-company"><a href="https://www.qomodo.me/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(251,146,60,0.3);transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--orange)'" onmouseout="this.style.borderColor='rgba(251,146,60,0.3)'">Qomodo</a></div>
+              <div class="exp-role">Senior Software Engineer</div>
+              <div class="exp-date">Apr 2025 – Present &nbsp;·&nbsp; Remote, Fintech</div>
+              <ul class="exp-bullets">
+                <li>Led architectural migration of the merchant app from Bubble.io to NestJS + Next.js, establishing a scalable and maintainable production stack</li>
+                <li>Drove the merchant-side technical implementation of a Pay Now payments product, broadening the platform's offering beyond BNPL</li>
+                <li>Reduced support tickets by 80% through proactive observability (Grafana, Prometheus, Loki), catching issues before they reached users</li>
+                <li>Managed AWS EKS and Kubernetes orchestration via FluxCD, maintaining a mature declarative GitOps workflow</li>
+                <li>Built high-throughput event-driven services with Node.js, TypeScript, and Apache Kafka for async microservice communication</li>
+                <li>Delivered full-stack features, streamlined CI/CD pipelines, and improved developer environments</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">NestJS</span>
+                <span class="exp-tag">Next.js</span>
+                <span class="exp-tag">Node.js</span>
+                <span class="exp-tag">TypeScript</span>
+                <span class="exp-tag">Kafka</span>
+                <span class="exp-tag">AWS EKS</span>
+                <span class="exp-tag">Kubernetes</span>
+                <span class="exp-tag">FluxCD</span>
+                <span class="exp-tag">GitOps</span>
+                <span class="exp-tag">Grafana</span>
+                <span class="exp-tag">Prometheus</span>
+                <span class="exp-tag">Loki</span>
+                <span class="exp-tag">Redis</span>
+                <span class="exp-tag">PostgreSQL</span>
+                <span class="exp-tag">GitHub Actions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unobravo -->
+          <div class="timeline-item" data-reveal data-reveal-delay="2">
+            <div class="exp-card">
+              <div class="exp-company"><a href="https://www.unobravo.com/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(251,146,60,0.3);transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--orange)'" onmouseout="this.style.borderColor='rgba(251,146,60,0.3)'">Unobravo</a></div>
+              <div class="exp-role">Senior Software Engineer · Platform Engineer</div>
+              <div class="exp-date">May 2022 – Apr 2025 &nbsp;·&nbsp; Remote, HealthTech</div>
+              <ul class="exp-bullets">
+                <li>Led backend platform internationalisation enabling the seamless launch of 2 new countries, directly contributing to business growth</li>
+                <li>Built serverless and monolithic solutions with TypeScript, Node.js, GraphQL, and Apollo Server on AWS (Lambda, DynamoDB, SQS, SNS, ECS, EventBridge)</li>
+                <li>Contributed to the enabling team — defined golden paths and service guidelines that improved developer productivity across the org</li>
+                <li>Implemented observability with OpenTelemetry, Grafana, Prometheus, Loki, and NewRelic, reducing troubleshooting time and increasing reliability</li>
+                <li>Migrated IaC from Terraform to Pulumi and introduced a Turborepo monorepo, streamlining workflows and release cycles</li>
+                <li>Automated deployments and built CI/CD pipelines with GitHub Actions, enabling frequent and reliable releases</li>
+                <li>Integrated third-party services including Stripe, SendGrid, Pendo, and LaunchDarkly into backend workflows</li>
+                <li>Collaborated in cross-functional Scrum/Kanban teams with English as the working language, working closely with designers, frontend developers, and product managers</li>
+                <li>Explored AI/ML integrations: ChatGPT, RAG pipelines, and vector databases in Postgres as part of R&amp;D PoC initiatives</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">Node.js</span>
+                <span class="exp-tag">TypeScript</span>
+                <span class="exp-tag">GraphQL</span>
+                <span class="exp-tag">Apollo Server</span>
+                <span class="exp-tag">AWS Lambda</span>
+                <span class="exp-tag">DynamoDB</span>
+                <span class="exp-tag">PostgreSQL</span>
+                <span class="exp-tag">MySQL</span>
+                <span class="exp-tag">OpenTelemetry</span>
+                <span class="exp-tag">Grafana</span>
+                <span class="exp-tag">NewRelic</span>
+                <span class="exp-tag">Pulumi</span>
+                <span class="exp-tag">Terraform</span>
+                <span class="exp-tag">Turborepo</span>
+                <span class="exp-tag">GitHub Actions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zakeke -->
+          <div class="timeline-item" data-reveal data-reveal-delay="3">
+            <div class="exp-card">
+              <div class="exp-company"><a href="https://www.zakeke.com/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(251,146,60,0.3);transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--orange)'" onmouseout="this.style.borderColor='rgba(251,146,60,0.3)'">Zakeke</a></div>
+              <div class="exp-role">Full Stack Developer</div>
+              <div class="exp-date">Mar 2022 – May 2022 &nbsp;·&nbsp; Remote, eCommerce</div>
+              <ul class="exp-bullets">
+                <li>Developed backend features for a visual product customisation platform serving global eCommerce businesses, using .NET and GraphQL</li>
+                <li>Implemented data persistence with SQL Server and Azure CosmosDB; contributed to the React + Relay frontend</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">.NET</span>
+                <span class="exp-tag">C#</span>
+                <span class="exp-tag">GraphQL</span>
+                <span class="exp-tag">SQL Server</span>
+                <span class="exp-tag">Azure CosmosDB</span>
+                <span class="exp-tag">React</span>
+                <span class="exp-tag">Relay</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zupit -->
+          <div class="timeline-item" data-reveal data-reveal-delay="4">
+            <div class="exp-card">
+              <div class="exp-company"><a href="https://www.zupit.it/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(251,146,60,0.3);transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--orange)'" onmouseout="this.style.borderColor='rgba(251,146,60,0.3)'">Zupit</a></div>
+              <div class="exp-role">Full Stack Developer</div>
+              <div class="exp-date">Mar 2020 – Feb 2022 &nbsp;·&nbsp; Remote &nbsp;·&nbsp; Consulting / Software House</div>
+              <ul class="exp-bullets">
+                <li>Delivered end-to-end full-stack solutions for clients across transport, insurance, healthcare, and engineering sectors</li>
+                <li>Built and maintained monolith backends using .NET, C#, ASP.NET, SQL Server, and Entity Framework</li>
+                <li>Developed responsive web interfaces with Vue.js, React, and Angular; cross-platform mobile apps with Ionic and Xamarin</li>
+                <li>Worked in agile scrum teams alongside product owners and cross-functional developers</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">.NET</span>
+                <span class="exp-tag">C#</span>
+                <span class="exp-tag">ASP.NET</span>
+                <span class="exp-tag">SQL Server</span>
+                <span class="exp-tag">Entity Framework</span>
+                <span class="exp-tag">Vue.js</span>
+                <span class="exp-tag">React</span>
+                <span class="exp-tag">Angular</span>
+                <span class="exp-tag">Ionic</span>
+                <span class="exp-tag">Xamarin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+       SKILLS
+  ====================================================== -->
+    <section id="skills" class="relative z-10 px-6 md:px-16 py-24">
+      <div class="max-w-6xl mx-auto">
+        <div data-reveal>
+          <div class="section-tag">Skills</div>
+          <h2 class="section-title">What I work with</h2>
+          <p class="section-sub"><span data-exp-years>6</span>+ years across backend, frontend, observability, and platform engineering</p>
+        </div>
+
+        <div class="flex flex-col gap-8">
+          <!-- LEFT: Hexagon grid -->
+          <div
+            data-reveal
+            data-reveal-delay="1"
+            class="p-6 rounded-2xl border overflow-x-auto"
+            style="border-color: var(--border); background: var(--bg-card)"
+          >
+            <div class="text-xs uppercase tracking-widest mb-5 flex items-center gap-3" style="color: #334155">
+              Stack overview
+              <span class="flex-1 h-px" style="background: var(--border)"></span>
+            </div>
+            <div class="hex-grid">
+              <div class="hex-row">
+                <div class="hex hex-be glow-be" data-cat="be">Node.js</div>
+                <div class="hex hex-pe" data-cat="pe">K8s</div>
+                <div class="hex hex-fe glow-fe" data-cat="fe">React</div>
+                <div class="hex hex-sre glow-sre" data-cat="sre">Prome&#8203;theus</div>
+                <div class="hex hex-be" data-cat="be">Type&#8203;Script</div>
+                <div class="hex hex-pe" data-cat="pe">Terraform</div>
+                <div class="hex hex-fe" data-cat="fe">Vue.js</div>
+                <div class="hex hex-tools" data-cat="tools">Docker</div>
+              </div>
+              <div class="hex-row offset">
+                <div class="hex hex-be" data-cat="be">Graph&#8203;QL</div>
+                <div class="hex hex-pe" data-cat="pe">Argo&#8203;CD</div>
+                <div class="hex hex-sre" data-cat="sre">OTel</div>
+                <div class="hex hex-fe" data-cat="fe">Next.js</div>
+                <div class="hex hex-pe" data-cat="pe">AWS</div>
+                <div class="hex hex-sre" data-cat="sre">Grafana</div>
+                <div class="hex hex-tools" data-cat="tools">ESLint</div>
+              </div>
+              <div class="hex-row">
+                <div class="hex hex-be" data-cat="be">Nest&#8203;JS</div>
+                <div class="hex hex-pe" data-cat="pe">Flux&#8203;CD</div>
+                <div class="hex hex-sre" data-cat="sre">Loki</div>
+                <div class="hex hex-fe" data-cat="fe">React Native</div>
+                <div class="hex hex-be" data-cat="be">Postgres</div>
+                <div class="hex hex-pe" data-cat="pe">Pulumi</div>
+                <div class="hex hex-tools glow-tools" data-cat="tools">GitHub Actions</div>
+                <div class="hex hex-be" data-cat="be">Kafka</div>
+              </div>
+              <div class="hex-row offset">
+                <div class="hex hex-be" data-cat="be">Express</div>
+                <div class="hex hex-pe" data-cat="pe">Helm</div>
+                <div class="hex hex-be" data-cat="be">Dynamo&#8203;DB</div>
+                <div class="hex hex-pe" data-cat="pe">Cloud&#8203;flare</div>
+                <div class="hex hex-be" data-cat="be">Redis</div>
+                <div class="hex hex-pe" data-cat="pe">Oracle</div>
+                <div class="hex hex-tools" data-cat="tools">Vite</div>
+              </div>
+              <div class="hex-row">
+                <div class="hex hex-be" data-cat="be">.NET / C#</div>
+                <div class="hex hex-be" data-cat="be">Firebase</div>
+                <div class="hex hex-fe" data-cat="fe">Ionic</div>
+                <div class="hex hex-tools" data-cat="tools">Turborepo</div>
+                <div class="hex hex-tools" data-cat="tools">Jest</div>
+              </div>
+            </div>
+            <div class="hex-legend">
+              <div class="legend-item" data-filter="be">
+                <div class="legend-dot" style="background: var(--orange)"></div>
+                Backend
+              </div>
+              <div class="legend-item" data-filter="sre">
+                <div class="legend-dot" style="background: var(--cyan)"></div>
+                SRE
+              </div>
+              <div class="legend-item" data-filter="pe">
+                <div class="legend-dot" style="background: var(--purple)"></div>
+                Platform
+              </div>
+              <div class="legend-item" data-filter="fe">
+                <div class="legend-dot" style="background: var(--green)"></div>
+                Frontend
+              </div>
+              <div class="legend-item" data-filter="tools">
+                <div class="legend-dot" style="background: var(--pink)"></div>
+                Tools
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Terminal grep -->
+          <div data-reveal data-reveal-delay="2" id="grep-panel" class="term-panel">
+            <div class="term-titlebar">
+              <div class="term-dot term-dot-r"></div>
+              <div class="term-dot term-dot-y"></div>
+              <div class="term-dot term-dot-g"></div>
+              <div class="term-wintitle">skills.grep — bash</div>
+            </div>
+            <div class="term-body" id="grep-body">
+              <div class="t-prompt">$ grep -rn "expertise" ./mattia --color=always</div>
+
+              <div class="t-group">
+                <div class="t-group-label">── backend ─────────────────────────────</div>
+                <div class="t-line">
+                  <span class="t-file-be">backend/api.ts</span><span class="t-sep">:12: </span
+                  ><span class="t-match-be">TypeScript · Node.js · NestJS · Express · Fastify · .NET · C#</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-be">backend/graph.ts</span><span class="t-sep">:34: </span
+                  ><span class="t-match-be">GraphQL · Apollo Server · REST APIs</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-be">backend/data.ts</span><span class="t-sep">:88: </span
+                  ><span class="t-match-be">Postgres · DynamoDB · Redis · MongoDB · SQL Server</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-be">backend/msg.ts</span><span class="t-sep">:5: </span
+                  ><span class="t-match-be">Kafka · SQS · SNS · EventBridge</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-be">backend/auth.ts</span><span class="t-sep">:71: </span
+                  ><span class="t-match-be">JWT · OAuth2 · Firebase Auth</span>
+                </div>
+              </div>
+
+              <div class="t-group">
+                <div class="t-group-label">── sre / observability ─────────────────</div>
+                <div class="t-line">
+                  <span class="t-file-sre">sre/traces.ts</span><span class="t-sep">:21: </span
+                  ><span class="t-match-sre">OpenTelemetry · Tempo</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-sre">sre/metrics.ts</span><span class="t-sep">:67: </span
+                  ><span class="t-match-sre">Prometheus · Grafana · Loki</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-sre">sre/pipeline.ts</span><span class="t-sep">:8: </span
+                  ><span class="t-match-sre">OTel Collector · Grafana Alloy</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-sre">sre/uptime.ts</span><span class="t-sep">:14: </span
+                  ><span class="t-match-sre">Gatus · NewRelic</span>
+                </div>
+              </div>
+
+              <div class="t-group">
+                <div class="t-group-label">── platform / infra ────────────────────</div>
+                <div class="t-line">
+                  <span class="t-file-pe">platform/orch.ts</span><span class="t-sep">:44: </span
+                  ><span class="t-match-pe">Kubernetes · Helm · ECS · EKS</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-pe">platform/gitops.ts</span><span class="t-sep">:9: </span
+                  ><span class="t-match-pe">ArgoCD · FluxCD · GitOps</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-pe">platform/iac.ts</span><span class="t-sep">:77: </span
+                  ><span class="t-match-pe">Terraform · Pulumi · CloudFormation</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-pe">platform/cloud.ts</span><span class="t-sep">:2: </span
+                  ><span class="t-match-pe">AWS · GCP · Oracle Cloud · Cloudflare</span>
+                </div>
+              </div>
+
+              <div class="t-group">
+                <div class="t-group-label">── frontend ────────────────────────────</div>
+                <div class="t-line">
+                  <span class="t-file-fe">frontend/spa.ts</span><span class="t-sep">:15: </span
+                  ><span class="t-match-fe">React · Vue.js · Next.js</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-fe">frontend/mobile.ts</span><span class="t-sep">:8: </span
+                  ><span class="t-match-fe">React Native · Ionic · Xamarin</span>
+                </div>
+              </div>
+
+              <div class="t-group">
+                <div class="t-group-label">── tools ────────────────────────────────</div>
+                <div class="t-line">
+                  <span class="t-file-tools">tools/cicd.ts</span><span class="t-sep">:33: </span
+                  ><span class="t-match-tools">GitHub Actions · CI/CD · Docker</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-tools">tools/mono.ts</span><span class="t-sep">:11: </span
+                  ><span class="t-match-tools">Turborepo · monorepo tooling</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-tools">tools/dx.ts</span><span class="t-sep">:44: </span
+                  ><span class="t-match-tools">ESLint · Biome · Vite · Jest</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-tools">tools/ai.ts</span><span class="t-sep">:6: </span
+                  ><span class="t-match-tools">ChatGPT · Claude Code · Copilot · RAG · vector databases</span>
+                </div>
+              </div>
+
+              <div class="t-group">
+                <div class="t-group-label">── 3rd party integrations ───────────────</div>
+                <div class="t-line">
+                  <span class="t-file-tools">integrations/payments.ts</span><span class="t-sep">:4: </span
+                  ><span class="t-match-tools">Stripe · Web3 · crypto payments</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-tools">integrations/email.ts</span><span class="t-sep">:9: </span
+                  ><span class="t-match-tools">SendGrid · AWS SES · Brevo</span>
+                </div>
+                <div class="t-line">
+                  <span class="t-file-tools">integrations/product.ts</span><span class="t-sep">:18: </span
+                  ><span class="t-match-tools">Pendo · LaunchDarkly · PostHog</span>
+                </div>
+              </div>
+
+              <div class="t-summary">51 matches across 6 disciplines</div>
+              <div class="t-line" style="margin-top: 4px">&gt; <span class="t-cursor"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+       EDUCATION
+  ====================================================== -->
+    <section id="education" class="relative z-10 px-6 md:px-16 py-24">
+      <div class="max-w-6xl mx-auto">
+        <div data-reveal>
+          <div class="section-tag">Education</div>
+          <h2 class="section-title">Background</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div class="edu-card" data-reveal data-reveal-delay="1">
+            <div class="edu-school">University of Trento</div>
+            <div class="edu-degree">Bachelor's Degree in Computer Science</div>
+            <div class="edu-date">Trento, Italy</div>
+            <p class="text-sm mt-3 leading-6" style="color: var(--text-muted)">
+              Core CS: Data Structures, Algorithms, Operating Systems, Databases, Networking. Self-directed focus on new
+              technologies alongside the curriculum.
+            </p>
+          </div>
+          <div class="edu-card" data-reveal data-reveal-delay="2">
+            <div class="edu-school">ITT Marconi Rovereto</div>
+            <div class="edu-degree">Technical Diploma — Computer Science</div>
+            <div class="edu-date">Rovereto, Italy</div>
+            <p class="text-sm mt-3 leading-6" style="color: var(--text-muted)">
+              Five-year technical institute specialising in computer science and software engineering fundamentals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+       FOOTER / CONTACT
+  ====================================================== -->
+    <footer id="contact" class="relative z-10 px-6 md:px-16 py-20 border-t" style="border-color: var(--border)">
+      <div class="max-w-6xl mx-auto flex flex-col items-center gap-6" data-reveal>
+        <div class="section-tag" style="margin-bottom: 0">Get in touch</div>
+        <h2 class="text-2xl md:text-3xl font-black text-white text-center">Let's build something together</h2>
+        <div class="flex gap-4 flex-wrap justify-center mt-2">
+          <!-- Email: assembled by JS on first interaction — never exposed in HTML source -->
+          <a
+            href="#"
+            id="email-link"
+            data-user="mattia.pater"
+            data-domain="gmail.com"
+            class="social-link"
+            title="Email"
+            aria-label="Send email"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            href="https://github.com/Pater999"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+            aria-label="GitHub profile"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/mattia-paternoster"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+            aria-label="LinkedIn profile"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://t.me/pater999"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Telegram"
+            aria-label="Telegram"
+          >
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+        </div>
+
+        <p class="text-xs mt-4" style="color: #334155">
+          &copy; <span id="year"></span> Mattia Paternoster &nbsp;·&nbsp;
+          <a href="projects" style="color: #334155" class="hover:text-slate-400 transition-colors"
+            >Projects</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="scripts/scripts.js" defer></script>
+  </body>
+</html>

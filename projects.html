@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Mattia Paternoster</title>
+  <meta name="description" content="Personal and university projects by Mattia Paternoster — Senior Platform & Backend Engineer." />
+  <link rel="canonical" href="https://pater999.it/projects.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/custom.css" />
+  <style>
+    /* Tabs */
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+    .tab-btn {
+      padding: 0.65rem 1.4rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      margin-bottom: -1px;
+      letter-spacing: 0.03em;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--orange); border-bottom-color: var(--orange); }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* Repo / project cards */
+    .repo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.3rem;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .repo-card:hover { border-color: rgba(251,146,60,0.3); transform: translateY(-2px); }
+    .repo-name { font-size: 0.85rem; font-weight: 700; color: var(--orange); }
+    .repo-desc { font-size: 0.72rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
+    .repo-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 0.5rem; }
+    .repo-lang {
+      font-size: 0.6rem; padding: 2px 8px; border-radius: 4px;
+      background: rgba(251,146,60,0.08); color: var(--orange);
+      border: 1px solid rgba(251,146,60,0.18);
+    }
+    .repo-link {
+      font-size: 0.65rem; color: var(--text-muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .repo-link:hover { color: var(--orange); }
+
+    /* Personal project cards */
+    .proj-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.3rem 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .proj-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--orange);
+    }
+    .proj-card:hover { border-color: rgba(251,146,60,0.35); transform: translateY(-3px); }
+    .proj-name { font-size: 0.95rem; font-weight: 800; color: var(--text); }
+    .proj-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; flex: 1; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .proj-tag {
+      font-size: 0.55rem; padding: 2px 8px; border-radius: 4px;
+      background: rgba(251,146,60,0.08); color: var(--orange);
+      border: 1px solid rgba(251,146,60,0.2);
+    }
+    .proj-links { display: flex; gap: 0.75rem; margin-top: 0.25rem; }
+    .proj-link {
+      font-size: 0.65rem; color: var(--text-muted);
+      text-decoration: none; transition: color 0.2s;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .proj-link:hover { color: var(--orange); }
+
+    /* Filter input */
+    .filter-input {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      color: var(--text);
+      font-size: 0.82rem;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%; max-width: 360px;
+    }
+    .filter-input:focus { border-color: rgba(251,146,60,0.4); }
+    .filter-input::placeholder { color: var(--text-muted); }
+
+    /* Avatar */
+    .avatar-small { width: 46px; height: 46px; border-radius: 50%; border: 2px solid var(--orange); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav" class="px-6 md:px-16 py-4 flex items-center justify-between">
+    <a href="/" class="text-sm font-black tracking-widest text-white z-50 relative">MP<span style="color:var(--orange)">_</span></a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/#about"      class="nav-link">About</a>
+      <a href="/#experience" class="nav-link">Experience</a>
+      <a href="/#skills"     class="nav-link">Skills</a>
+      <a href="/#contact"    class="nav-link">Contact</a>
+    </div>
+    <button id="hamburger" class="md:hidden text-slate-400 hover:text-white transition-colors z-50 relative" aria-label="Toggle navigation">
+      <svg id="icon-open"  xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation">
+    <a href="/#about"      class="nav-link" onclick="closeMobileMenu()">About</a>
+    <a href="/#experience" class="nav-link" onclick="closeMobileMenu()">Experience</a>
+    <a href="/#skills"     class="nav-link" onclick="closeMobileMenu()">Skills</a>
+    <a href="/#contact"    class="nav-link" onclick="closeMobileMenu()">Contact</a>
+  </div>
+
+  <!-- MAIN -->
+  <main class="relative z-10 px-6 md:px-16 max-w-6xl mx-auto" style="padding-top:6rem;padding-bottom:5rem">
+
+    <div class="mb-8">
+      <div class="section-tag">Open Source</div>
+      <h1 class="section-title">Projects</h1>
+      <p class="section-sub">Personal work and university experiments.</p>
+    </div>
+
+    <!-- GitHub user card -->
+    <div id="user-card" class="flex items-center gap-4 mb-8 p-4 rounded-xl border" style="border-color:var(--border);background:var(--bg-card);display:none!important">
+      <img id="gh-avatar" class="avatar-small" src="" alt="Pater999" width="46" height="46" />
+      <div>
+        <div id="gh-name" class="font-bold text-sm text-white"></div>
+        <div id="gh-bio"  class="text-xs mt-0.5" style="color:var(--text-muted)"></div>
+        <a href="https://github.com/Pater999" target="_blank" rel="noopener noreferrer" class="text-xs mt-1 inline-block" style="color:var(--orange)">github.com/Pater999 ↗</a>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab('personal', this)">Personal</button>
+      <button class="tab-btn"        onclick="switchTab('unitn', this)">UNITN</button>
+    </div>
+
+    <!-- TAB: Personal projects -->
+    <div id="tab-personal" class="tab-panel active">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="proj-card">
+          <div class="proj-name">Trentino Trasporti GraphQL</div>
+          <div class="proj-desc">GraphQL API wrapper around the Trentino public transport REST API. Enables expressive queries for routes, stops, and real-time arrivals.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">GraphQL</span>
+            <span class="proj-tag">TypeScript</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/Pater999/trentino-trasporti-graphql" target="_blank" rel="noopener noreferrer" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">Osservaprezzi Carburanti</div>
+          <div class="proj-desc">Node.js API wrapper for the Italian government's fuel price observatory (MiTE). Simplifies access to real-time petrol and diesel prices nationwide.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">REST API</span>
+            <span class="proj-tag">npm</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/Pater999/osservaprezzi-carburanti-node" target="_blank" rel="noopener noreferrer" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">pater999.it</div>
+          <div class="proj-desc">This portfolio website — built with pure HTML, vanilla JS, and Tailwind CSS. Blueprint/infra aesthetic with particle constellation, hex skill grid, and terminal grep panel.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">HTML</span>
+            <span class="proj-tag">Tailwind</span>
+            <span class="proj-tag">Canvas</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/Pater999/Pater999.github.io" target="_blank" rel="noopener noreferrer" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">Trento Parking</div>
+          <div class="proj-desc">TypeScript library providing real-time access to parking and bike slot availability in Trento, Italy. Fetches live data from official Comune di Trento services with distance calculations and space filtering.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">TypeScript</span>
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">npm</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/Pater999/trento-parking" target="_blank" rel="noopener noreferrer" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">Node Boilerplate</div>
+          <div class="proj-desc">Production-ready TypeScript Node.js starter with Vitest, Biome.js linting, pre-commit hooks, Dockerfile, and GitHub Actions CI — opinionated defaults for new services.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">TypeScript</span>
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">Vitest</span>
+            <span class="proj-tag">Biome.js</span>
+            <span class="proj-tag">Docker</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/Pater999/node-boilerplate" target="_blank" rel="noopener noreferrer" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">Chain Explorer Backend</div>
+          <div class="proj-desc">TypeScript backend for a blockchain chain explorer — exposes APIs to browse blocks, transactions, and addresses on-chain.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">TypeScript</span>
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">Blockchain</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/Pater999/chain-explorer-backend" target="_blank" rel="noopener noreferrer" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB: UNITN projects (loaded from GitHub) -->
+    <div id="tab-unitn" class="tab-panel">
+      <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-6">
+        <input type="text" id="unitn-filter" class="filter-input" placeholder="Search university projects…" oninput="filterUnitn(this.value)" />
+        <span id="unitn-count" class="text-xs" style="color:var(--text-muted);white-space:nowrap"></span>
+      </div>
+      <div id="unitn-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="text-sm" style="color:var(--text-muted)">Loading from GitHub…</div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative z-10 px-6 md:px-16 py-10 border-t" style="border-color:var(--border)">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs" style="color:#334155">&copy; <span id="year"></span> Mattia Paternoster</p>
+      <div class="flex gap-4">
+        <a href="https://github.com/Pater999" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/mattia-paternoster" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/script-projects.js"></script>
+
+</body>
+</html>

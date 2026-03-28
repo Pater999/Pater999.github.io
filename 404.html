@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found · Mattia Paternoster</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/custom.css" />
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+
+  <div class="relative z-10 flex flex-col items-center gap-6">
+    <!-- Glitch 404 -->
+    <div class="glitch-name" data-text="404" style="font-size:clamp(5rem,22vw,9rem);line-height:1">
+      <em>404</em>
+    </div>
+
+    <div class="discipline-tag" style="margin-bottom:0">Page not found</div>
+
+    <p class="text-sm max-w-xs" style="color:var(--text-muted)">
+      This route doesn't exist in the cluster.<br>
+      The resource may have been moved or deleted.
+    </p>
+
+    <div class="flex flex-col items-center gap-2 text-xs font-mono" style="color:#334155">
+      <span>$ kubectl get route <span style="color:var(--orange)">this-page</span></span>
+      <span style="color:#1e293b">Error from server (NotFound): routes "this-page" not found</span>
+    </div>
+
+    <a href="/" class="btn-primary mt-2">← Back to home</a>
+  </div>
+
+</body>
+</html>
